@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { FinderComponent } from './finder/finder.component';
 import { MenuComponent } from './menu/menu.component';
 
+import { routing } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
