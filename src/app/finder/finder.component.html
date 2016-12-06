@@ -1,3 +1,24 @@
-<p>
-  finder works!
-</p>
+<h1>Find Musik</h1>
+<p class='lead'>This app allow you to search and browse your favorite songs and new releases... </p>
+
+<form>
+  <div class="form-group">
+    <input class="form-control" type='text' placeholder="Search Your Favorite Songs" [(ngModel)]='findStr' name='findStr' (keyup)='findSong()'>
+  </div>
+</form>
+
+<div *ngIf='findResult'>
+  <div *ngFor="let artist of findResult">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="finder well">
+          <h4><a routerLink="/artist/{{artist.id}}">{{artist.name}}</a></h4>
+          <div>
+            <strong>Genres:</strong>
+            <span *ngFor="let genre of artist.genres">{{genre}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
