@@ -7,15 +7,20 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { FinderComponent } from './finder/finder.component';
 import { MenuComponent } from './menu/menu.component';
+import { ArtistComponent } from './artist/artist.component';
 
 import { routing } from './app.routing';
+import { AlbumComponent } from './album/album.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     FinderComponent,
-    MenuComponent
+    MenuComponent,
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
